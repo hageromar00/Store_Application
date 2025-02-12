@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:store_application/model/category.dart';
 import 'package:store_application/widget/customcard.dart';
 
 class ListCustomCard extends StatelessWidget {
-  const ListCustomCard({super.key});
+   ListCustomCard({super.key,required this.prod});
+  final List<ProductModel> prod;
 
   @override
   Widget build(BuildContext context) {
@@ -12,14 +14,14 @@ class ListCustomCard extends StatelessWidget {
           primary: false,
           physics:const BouncingScrollPhysics(),
           clipBehavior: Clip.none,
-          itemCount: 10,
+          itemCount: prod.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 1.1,
               mainAxisSpacing: 100,
               crossAxisSpacing: 10),
           itemBuilder: (context, index) {
-            return const CustomCard();
+            return  CustomCard(model: prod[index]);
           }),
     );
   }

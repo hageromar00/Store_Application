@@ -13,7 +13,7 @@ class CustomFieldText extends StatelessWidget {
         onChanged: onChag,
         decoration: InputDecoration(
             hintText: 'Product',
-            hintStyle: TextStyle(color: Colors.grey),
+            hintStyle:const TextStyle(color: Colors.grey),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
       ),

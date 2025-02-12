@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:store_application/widget/customcard.dart';
+import 'package:store_application/model/category.dart';
+import 'package:store_application/service/getproduct.dart';
 import 'package:store_application/widget/listCustomCard.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,8 +28,17 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        body: 
-        ListCustomCard()
+        body: FutureBuilder<List<ProductModel>>(
+          future: GetAllProduct().getallproduct(),
+          builder: (context, snapshat) {
+            if (snapshat.hasData) {
+              List<ProductModel> products = snapshat.data!;
+              return ListCustomCard(prod: products);
+            } else {
+              return const Center(child: CircularProgressIndicator());
+            }
+          },
+        )
         //
         );
   }
