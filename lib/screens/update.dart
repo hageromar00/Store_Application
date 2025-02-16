@@ -3,8 +3,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:store_application/model/category.dart';
 import 'package:store_application/service/update_product.dart';
 import 'package:store_application/widget/customButton.dart';
-import 'package:store_application/widget/customFieldText.dart';
-class UpdatePage extends StatefulWidget {
+import 'package:store_application/widget/customFieldText.dart';class UpdatePage extends StatefulWidget {
   const UpdatePage({super.key});
   static String id = 'update';
   @override
@@ -108,6 +107,7 @@ class _UpdatePageState extends State<UpdatePage> {
     );
   }
 }
+
 
 // class UpdatePage extends StatefulWidget {
 //   const UpdatePage({super.key});
