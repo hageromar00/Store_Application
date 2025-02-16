@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         HomePage.id: (context) => const HomePage(),
-        UpdatePage.Id: (context) => const UpdatePage(),
+        UpdatePage.id: (context) => const UpdatePage(),
       },
       initialRoute: HomePage.id,
     );
