@@ -20,4 +20,43 @@ class API {
       throw Exception("Response is error: $response.statusCode");
     }
   }
+   Future<dynamic> putService(
+    {required String URI,
+    @required String? token,
+    @required dynamic body}) async {
+  Map<String, String> headers = {};
+  // headers.addAll({'Content-Type': 'application/x-www-form-urlencoded'});
+  if (token != null) {
+    headers.addAll({"Authorization": "Bearer $token"});
+  }
+  http.Response response =
+      await http.put(Uri.parse(URI), body: body, headers: headers);
+  if (response.statusCode == 200) {
+    Map<String, dynamic> data = jsonDecode(response.body);
+    return data;
+    // return jsonDecode(response.body);
+  } else {
+    throw Exception("Unexpected status code: ${response.statusCode}");
+  }
+}
+
+Future<dynamic> postService(
+    {required String URI,
+    @required String? token,
+    @required dynamic body}) async {
+  Map<String, String> headers = {};
+
+  if (token != null) {
+    headers.addAll({"Authorization": "Bearer $token"});
+  }
+  http.Response response =
+      await http.post(Uri.parse(URI), body: body, headers: headers);
+  if (response.statusCode == 200) {
+    Map<String, dynamic> data = jsonDecode(response.body);
+    return data;
+    // return jsonDecode(response.body);
+  } else {
+    throw Exception("Unexpected status code: ${response.statusCode}");
+  }
+}
 }
