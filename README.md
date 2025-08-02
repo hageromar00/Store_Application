@@ -16,4 +16,3 @@ The app is built using **Flutter** as part of my learning journey to develop rea
 - **Dart** (Programming Language)
 - **REST API** (for fetching product data)
 - **State Management**: Cubit
-- **MVVM Architecture** (for clean code structure)
