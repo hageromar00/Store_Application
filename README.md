@@ -1,17 +1,19 @@
-# store_application
+# 🛍️ Store App
 
-A new Flutter project.
+**Store App** is a simple product management application where you can **view, add, and edit products** easily.  
+The app is built using **Flutter** as part of my learning journey to develop real-world mobile applications.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# Store_Application" 
+---
+## ✨ Features
+- Display a list of products with details.
+- Add new products.
+- Edit existing products.
+- Update the product list without losing API data.
+- Simple and smooth user interface.
+---
+## 🛠️ Tech Stack
+- **Flutter** (UI)
+- **Dart** (Programming Language)
+- **REST API** (for fetching product data)
+- **State Management**: Cubit
+- **MVVM Architecture** (for clean code structure)
